@@ -38,3 +38,20 @@ Create your own vim environment
 
 2. use my "Vimpyre" project to add other useful vim scripts: https://github.com/pct/vimpyre
 
+Recommended install (use vimpyre)
+----------------------------------
+
+(And you must config for some plugins you had installed.)
+
+basement::
+
+    $ vimpyre install vim-scripts/Align vim-scripts/Engspchk tomtom/checksyntax_vim sjl/gundo.vim vim-scripts/matchit.zip 
+
+autocomplete::
+
+    $ vimpyre install vim-scripts/AutoComplPop Shougo/neocomplcache garbas/vim-snipmate xolox/vim-easytags ervandew/supertab
+
+web develop::
+
+    $ vimpyre install vim-scripts/OOP-javascript-indentation tpope/vim-haml othree/fecompressor.vim othree/html5.vim tpope/vim-ragtag kchmck/vim-coffee-script mattn/zencoding-vim 
+
