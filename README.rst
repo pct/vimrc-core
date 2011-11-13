@@ -5,7 +5,7 @@ One Step Install (Do you trust me?)
 ------------------------------------
 command::
 
-    $ wget --no-check-certificate https://github.com/vimrc-corerc-core/raw/master/install.sh -O - | sh
+    $ wget --no-check-certificate https://github.com/vimrc-core/raw/master/install.sh -O - | sh
 
 The origin .vim and .vimrc will be renamed to .vim.yours and .vimrc.yours
 
