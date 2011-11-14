@@ -5,7 +5,7 @@ One Step Install (Do you trust me?)
 ------------------------------------
 command::
 
-    $ wget --no-check-certificate https://github.com/vimrc-core/raw/master/install.sh -O - | sh
+    $ wget --no-check-certificate https://github.com/pct/vimrc-core/raw/master/install.sh -O - | sh
 
 The origin .vim and .vimrc will be renamed to .vim.yours and .vimrc.yours
 
@@ -13,7 +13,7 @@ The manual way to install vimrc-core
 ----------------------------------
 1. clone to your home directory::
 
-    $ git clone git://github.com/vimrc-core.git
+    $ git clone git://github.com/pct/vimrc-core.git
 
 2. update vimrc-core::
 
