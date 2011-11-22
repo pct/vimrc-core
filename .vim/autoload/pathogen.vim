@@ -163,7 +163,7 @@ let s:done_bundles = ''
 function! pathogen#helptags() " {{{1
   let sep = pathogen#separator()
   for dir in pathogen#split(&rtp)
-    if (dir.sep)[0 : strlen($VIMRUNTIME)] !=# $VIMRUNTIME.sep && filewritable(dir.sep.'doc') == 2 && !empty(glob(dir.sep.'doc'.sep.'*')) && (!filereadable(dir.sep.'doc'.sep.'tags') || filewritable(dir.sep.'doc'.sep.'tags'))
+    if (dir.sep)[0 : strlen($VIMRUNTIME)] !=# $VIMRUNTIME.sep && filewritable(dir.'/doc') == 2 && !empty(glob(dir.'/doc/*')) && (!filereadable(dir.'/doc/tags') || filewritable(dir.'/doc/tags'))
       helptags `=dir.'/doc'`
     endif
   endfor
@@ -172,19 +172,19 @@ endfunction " }}}1
 command! -bar Helptags :call pathogen#helptags()
 
 " Like findfile(), but hardcoded to use the runtimepath.
-function! pathogen#runtime_findfile(file,count) "{{{1
+function! pathogen#rtpfindfile(file,count) "{{{1
   let rtp = pathogen#join(1,pathogen#split(&rtp))
   return fnamemodify(findfile(a:file,rtp,a:count),':p')
 endfunction " }}}1
 
-function! s:find(count,cmd,file,lcd) " {{{1
+function! s:find(count,cmd,file,...) " {{{1
   let rtp = pathogen#join(1,pathogen#split(&runtimepath))
-  let file = pathogen#runtime_findfile(a:file,a:count)
+  let file = pathogen#rtpfindfile(a:file,a:count)
   if file ==# ''
     return "echoerr 'E345: Can''t find file \"".a:file."\" in runtimepath'"
-  elseif a:lcd
+  elseif a:0
     let path = file[0:-strlen(a:file)-2]
-    execute 'lcd `=path`'
+    execute a:1.' `=path`'
     return a:cmd.' '.fnameescape(a:file)
   else
     return a:cmd.' '.fnameescape(file)
@@ -218,13 +218,13 @@ function! s:Findcomplete(A,L,P) " {{{1
   return sort(keys(found))
 endfunction " }}}1
 
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Ve       :execute s:find(<count>,'edit<bang>',<q-args>,0)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vedit    :execute s:find(<count>,'edit<bang>',<q-args>,0)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vopen    :execute s:find(<count>,'edit<bang>',<q-args>,1)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vsplit   :execute s:find(<count>,'split',<q-args>,<bang>1)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vvsplit  :execute s:find(<count>,'vsplit',<q-args>,<bang>1)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vtabedit :execute s:find(<count>,'tabedit',<q-args>,<bang>1)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vpedit   :execute s:find(<count>,'pedit',<q-args>,<bang>1)
-command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vread    :execute s:find(<count>,'read',<q-args>,<bang>1)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Ve       :execute s:find(<count>,'edit<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vedit    :execute s:find(<count>,'edit<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vsplit   :execute s:find(<count>,'split<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vvsplit  :execute s:find(<count>,'vsplit<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vtabedit :execute s:find(<count>,'tabedit<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vpedit   :execute s:find(<count>,'pedit<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vread    :execute s:find(<count>,'read<bang>',<q-args>)
+command! -bar -bang -count=1 -nargs=1 -complete=customlist,s:Findcomplete Vopen    :execute s:find(<count>,'edit<bang>',<q-args>,'lcd')
 
 " vim:set ft=vim ts=8 sw=2 sts=2:

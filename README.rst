@@ -43,6 +43,14 @@ Recommended install (use vimpyre)
 
 (And you must config for some plugins you had installed.)
 
+init and add settings to your .vimrc::
+
+    $ vimpyre init 
+
+  Please add the following to your .vimrc::
+
+    call pathogen#runtime_append_all_bundles("vimpyre")
+
 basement::
 
     $ vimpyre install vim-scripts/Align vim-scripts/Engspchk tomtom/checksyntax_vim sjl/gundo.vim vim-scripts/matchit.zip 
