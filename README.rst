@@ -49,7 +49,7 @@ init and add settings to your .vimrc::
 
 And please add the following to your .vimrc::
 
-    call pathogen#runtime_append_all_bundles("vimpyre")
+    call pathogen#infect("vimpyre")
 
 basement::
 
