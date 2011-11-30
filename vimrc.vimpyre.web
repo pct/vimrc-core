@@ -191,7 +191,7 @@ endif
 
 
 " use vimpyre
-call pathogen#runtime_append_all_bundles("vimpyre")
+call pathogen#infect("vimpyre")
 
 
 " ==== zencoding start ====
