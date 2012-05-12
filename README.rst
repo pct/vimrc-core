@@ -7,6 +7,10 @@ command::
 
     $ wget --no-check-certificate https://github.com/pct/vimrc-core/raw/master/install.sh -O - | sh
 
+or use `my develop env`::
+
+    $ wget --no-check-certificate https://github.com/pct/vimrc-core/raw/master/install-pct-env.sh -O - | sh
+
 The origin .vim and .vimrc will be renamed to .vim.yours and .vimrc.yours
 
 The manual way to install vimrc-core
