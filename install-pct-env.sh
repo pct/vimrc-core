@@ -35,4 +35,4 @@ vimpyre install vim-scripts/AutoComplPop Shougo/neocomplcache garbas/vim-snipmat
 vimpyre install vim-scripts/OOP-javascript-indentation tpope/vim-haml othree/fecompressor.vim othree/html5.vim tpope/vim-ragtag kchmck/vim-coffee-script mattn/zencoding-vim
 
 # others
-vimpyre install ctrlp.vim ctrlp.vim.exts loremipsum titanium-vim vim-css-color vim-less vim-powerline
+vimpyre install kien/ctrlp.vim tacahiroy/ctrlp.vim.exts vim-scripts/loremipsum pekepeke/titanium-vim skammer/vim-css-color groenewege/vim-less Lokaltog/vim-powerline
