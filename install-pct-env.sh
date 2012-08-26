@@ -29,7 +29,7 @@ rehash
 vimpyre install vim-scripts/Align vim-scripts/Engspchk tomtom/checksyntax_vim sjl/gundo.vim vim-scripts/matchit.zip
 
 # auto complete
-vimpyre install vim-scripts/AutoComplPop Shougo/neocomplcache garbas/vim-snipmate xolox/vim-easytags ervandew/supertab
+vimpyre install vim-scripts/AutoComplPop Shougo/neocomplcache garbas/vim-snipmate xolox/vim-easytags ervandew/supertab Shougo/neocomplcache-snippets-complete
 
 # web dev
 vimpyre install vim-scripts/OOP-javascript-indentation tpope/vim-haml othree/fecompressor.vim othree/html5.vim tpope/vim-ragtag kchmck/vim-coffee-script mattn/zencoding-vim
