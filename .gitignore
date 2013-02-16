@@ -1,8 +1,5 @@
 *~
+*.swp
 .vim/undofiles
 .vim/.netrwhist
-.vim/vimpyre.json
-.vim/vimpyre/
-.vim/bundle/*/doc/tag*
-.vim/bundle/*/.hg/cache/
-.vim/bundle/*/.hg/dirstate
+.vim/bundle/*
