@@ -1,3 +1,74 @@
+"==================================
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+
+Bundle 'vim-scripts/Align'
+Bundle 'vim-scripts/Engspchk' 
+Bundle 'tomtom/checksyntax_vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'vim-scripts/matchit.zip'
+" ...
+Bundle 'othree/vim-autocomplpop'
+Bundle 'marcweber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
+Bundle 'Shougo/neocomplcache' 
+
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate'
+
+
+Bundle 'xolox/vim-easytags' 
+Bundle 'ervandew/supertab' 
+Bundle 'Shougo/neosnippet'
+Bundle 'vim-scripts/OOP-javascript-indentation'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-ragtag' 
+Bundle 'kchmck/vim-coffee-script' 
+Bundle 'mattn/zencoding-vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/loremipsum' 
+Bundle 'pekepeke/titanium-vim' 
+Bundle 'groenewege/vim-less' 
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'othree/html5.vim'
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+
+" ===============================================================
+
+
 " 設定 GUI 字型
 set guifont=Droid\ Sans\ Mono\ 12
 
@@ -192,46 +263,50 @@ endif
 
 
 " ==== zencoding start ====
-let g:user_zen_settings = {
-\  'lang' : 'ja',
-\  'html' : {
-\    'filters' : 'html',
-\    'indentation' : ' '
-\  },
-\  'perl' : {
-\    'indentation' : '  ',
-\    'aliases' : {
-\      'req' : "require '|'"
-\    },
-\    'snippets' : {
-\      'use' : "use strict\nuse warnings\n\n",
-\      'w' : "warn \"${cursor}\";",
-\    },
-\  },
-\  'php' : {
-\    'extends' : 'html',
-\    'filters' : 'html,c',
-\  },
-\  'css' : {
-\    'filters' : 'fc',
-\  },
-\  'javascript' : {
-\    'snippets' : {
-\      'jq' : "$(function() {\n\t${cursor}${child}\n});",
-\      'jq:each' : "$.each(arr, function(index, item)\n\t${child}\n});",
-\      'fn' : "(function() {\n\t${cursor}\n})();",
-\      'tm' : "setTimeout(function() {\n\t${cursor}\n}, 100);",
-\    },
-\  },
-\ 'java' : {
-\  'indentation' : '    ',
-\  'snippets' : {
-\   'main': "public static void main(String[] args) {\n\t|\n}",
-\   'println': "System.out.println(\"|\");",
-\   'class': "public class | {\n}\n",
-\  },
-\ },
-\}
+  let g:user_zen_settings = {
+  \  'lang' : 'ja',
+  \  'erb' : {
+  \    'filters' : 'erb',
+  \    'indentation' : ' '
+  \  },
+  \  'html' : {
+  \    'filters' : 'html',
+  \    'indentation' : ' '
+  \  },
+  \  'perl' : {
+  \    'indentation' : '  ',
+  \    'aliases' : {
+  \      'req' : "require '|'"
+  \    },
+  \    'snippets' : {
+  \      'use' : "use strict\nuse warnings\n\n",
+  \      'w' : "warn \"${cursor}\";",
+  \    },
+  \  },
+  \  'php' : {
+  \    'extends' : 'html',
+  \    'filters' : 'html,c',
+  \  },
+  \  'css' : {
+  \    'filters' : 'fc',
+  \  },
+  \  'javascript' : {
+  \    'snippets' : {
+  \      'jq' : "$(function() {\n\t${cursor}${child}\n});",
+  \      'jq:each' : "$.each(arr, function(index, item)\n\t${child}\n});",
+  \      'fn' : "(function() {\n\t${cursor}\n})();",
+  \      'tm' : "setTimeout(function() {\n\t${cursor}\n}, 100);",
+  \    },
+  \  },
+  \ 'java' : {
+  \  'indentation' : '    ',
+  \  'snippets' : {
+  \   'main': "public static void main(String[] args) {\n\t|\n}",
+  \   'println': "System.out.println(\"|\");",
+  \   'class': "public class | {\n}\n",
+  \  },
+  \ },
+  \}
 " ==== zencoding end ====
 
 " ==== neocomplcache start ====
@@ -318,68 +393,3 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 
 
-"==================================
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-
-Bundle 'vim-scripts/Align'
-Bundle 'vim-scripts/Engspchk' 
-Bundle 'tomtom/checksyntax_vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'vim-scripts/matchit.zip'
-" ...
-Bundle 'vim-scripts/AutoComplPop'
-Bundle 'Shougo/neocomplcache' 
-
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
-Bundle 'garbas/vim-snipmate'
-
-
-Bundle 'xolox/vim-easytags' 
-Bundle 'ervandew/supertab' 
-Bundle 'Shougo/neosnippet'
-Bundle 'vim-scripts/OOP-javascript-indentation'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-ragtag' 
-Bundle 'kchmck/vim-coffee-script' 
-Bundle 'mattn/zencoding-vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/loremipsum' 
-Bundle 'pekepeke/titanium-vim' 
-Bundle 'groenewege/vim-less' 
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
-
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
