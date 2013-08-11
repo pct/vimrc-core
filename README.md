@@ -30,12 +30,12 @@ The origin .vim and .vimrc will be renamed to .vim.yours and .vimrc.yours
 
 ###Create your own vim environment
 
-I've using Vundle now.
+I've using NeoBundle now.
 
-Please use [Vundle](https://github.com/gmarik/vundle)
+Please use [NeoBundle](https://github.com/Shougo/neobundle.vim)
 
 just in your vim env and use:
 
-    :VundleInstall
+    :NeoBundleInstall
 
-    :VundleUpdate
+    :NeoBundleUpdate
