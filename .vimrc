@@ -97,7 +97,7 @@ NeoBundle 'lucapette/vim-textobj-underscore' " a_, i_
 NeoBundle 'majutsushi/tagbar'
 
 " Status line
-NeoBundle 'terryma/vim-powerline', {'rev':'develop'}
+NeoBundle 'bling/vim-airline'
 
 " Color themems
 NeoBundle 'altercation/vim-colors-solarized'
@@ -349,4 +349,5 @@ let g:nerdtree_tabs_focus_on_files=1
 "Tagbar"
 "autocmd VimEnter * nested :call tagbar#autoopen(1)
 
-
+" airline
+let g:airline_powerline_fonts = 1
