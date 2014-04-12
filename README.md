@@ -51,8 +51,3 @@ just in your vim env and use:
 1. Check your vim environment has +python or not, just type:
 
     	$ vim --version
-
-2. Compile YouCompleteMe
-
-		$ cd ~/.vim/bundle/YouCompleteMe/
-		$ ./install.sh
