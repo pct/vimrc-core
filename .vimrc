@@ -12,6 +12,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My NeoBundles here:
 "
 
+" Editor Config
+NeoBundle 'editorconfig/editorconfig-vim'
+
 " Rails
 NeoBundle 'tpope/vim-rails.git'
 
