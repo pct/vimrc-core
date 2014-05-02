@@ -39,7 +39,6 @@ NeoBundle 'mileszs/ack.vim'
 " Code completion
 " NeoBundle'Shougo/neocomplcache'
 " NeoBundle 'vim-scripts/AutoComplPop'
-NeoBundle 'Valloric/YouCompleteMe'
 
 " Snippets
 " NeoBundle 'Shougo/neosnippet'
