@@ -21,16 +21,10 @@ NeoBundle 'tpope/vim-rails.git'
 " Misc
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'ervandew/supertab' 
-NeoBundle 'kchmck/vim-coffee-script' 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'pekepeke/titanium-vim' 
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'wincent/Command-T'
 
-" ===== from https://github.com/terryma/dotfiles/blob/master/.vimrc =====
 " Fuzzy search
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
@@ -40,63 +34,32 @@ NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'mileszs/ack.vim'
 
 " Code completion
-" NeoBundle'Shougo/neocomplcache'
-" NeoBundle 'vim-scripts/AutoComplPop'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neocomplcache.vim'
+
+" Shell
+NeoBundle 'thinca/vim-quickrun'
 
 " Snippets
-" NeoBundle 'Shougo/neosnippet'
-" NeoBundle 'honza/vim-snippets'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'JazzCore/neocomplcache-ultisnips'
-
-" Marks
-" NeoBundle 'kshenoy/vim-signature'
-
-" Comments
-NeoBundle 'scrooloose/nerdcommenter'
 
 " File browsing
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'Shougo/vimfiler'
-" NeoBundle 'fholgado/minibufexpl.vim'
+
+" Syntax (> 50 languages support)
+NeoBundle 'sheerun/vim-polyglot'
 
 " Syntax checker
 NeoBundle 'scrooloose/syntastic'
 
-" Shell
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'tpope/vim-dispatch'
-
-" File types
-" NeoBundle 'rstacruz/sparkup', {'rtp': 'vim'} "HTML
-NeoBundle 'tpope/vim-markdown' "Markdown
-NeoBundle 'terryma/vim-instant-markdown' "Markdown
-" NeoBundle 'vim-scripts/deb.vim' "Debian packages
-NeoBundle 'vim-ruby/vim-ruby' "Ruby
-
-" Git
-NeoBundle 'tpope/vim-fugitive'
-
-" Motions
-NeoBundle 'Lokaltog/vim-easymotion'
-"NeoBundle 'goldfeld/vim-seek'
-
 " Text Objects
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kana/vim-textobj-entire' " ae, ie
-NeoBundle 'kana/vim-textobj-lastpat' " a/, i/, a?, i?
-NeoBundle 'kana/vim-textobj-line' " al, il
-NeoBundle 'kana/vim-textobj-indent' " ai, ii, aI, iI
-NeoBundle 'lucapette/vim-textobj-underscore' " a_, i_
-" NeoBundle 'terryma/vim-expand-region'
-
-" Tags
-" NeoBundle 'xolox/vim-easytags'
-NeoBundle 'majutsushi/tagbar'
 
 " Status line
 NeoBundle 'bling/vim-airline'
@@ -112,33 +75,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'nanotech/jellybeans.vim'
 " NeoBundle 'vim-scripts/wombat256.vim'
 
-" Misc
-NeoBundle 'kana/vim-submode'
-NeoBundle 'kana/vim-scratch'
-NeoBundle 'vim-scripts/BufOnly.vim'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 't9md/vim-quickhl'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'koron/nyancat-vim'
-NeoBundle 'Raimondi/delimitMate'
-" NeoBundle 'terryma/vim-smooth-scroll'
 
-
-" Ones that I don't really use anymore
-" NeoBundle 'vim-scripts/TaskList.vim'
-" NeoBundle 'myusuf3/numbers.vim'
-" NeoBundle 'kana/vim-arpeggio'
-" NeoBundle 'kana/vim-smartinput'
-" NeoBundle 'Shougo/echodoc'
-" NeoBundle 'klen/python-mode'
-" NeoBundle 'nathanaelkane/vim-indent-guides'
-" NeoBundle 'hynek/vim-python-pep8-indent'
-" NeoBundle 'kien/ctrlp.vim'
-" NeoBundle 'mattn/calendar-vim'
-" NeoBundle 'sjl/clam.vim'
-" NeoBundle 'xolox/vim-session'
-" NeoBundle 'sjl/vitality.vim'
 filetype plugin indent on     " required!
 
 " Brief help
@@ -333,6 +270,12 @@ if version >= 703
   endif
 endif
 
+
+"=================
+" Plugin Settings
+"=================
+
+
 "Emmet settings"
 let g:user_emmet_expandabbr_key = '<c-e>'
 let g:use_emmet_complete_tag = 1
@@ -348,8 +291,8 @@ let NERDTreeWinSize=26
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_focus_on_files=1
 
-"Tagbar"
-"autocmd VimEnter * nested :call tagbar#autoopen(1)
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
 
 " airline
 let g:airline_powerline_fonts = 1

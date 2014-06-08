@@ -51,3 +51,5 @@ just in your vim env and use:
 1. Check your vim environment has +python or not, just type:
 
     	$ vim --version
+
+2. If you do not need "YouCompleteMe", just comment it.
