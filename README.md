@@ -52,4 +52,6 @@ just in your vim env and use:
 
     	$ vim --version
 
-2. If you do not need "YouCompleteMe", just comment it.
+2. If you do not need "YouCompleteMe", just remove it, or:
+
+    	$ cd ~/.vim/bundle/YouCompleteMe; ./install.sh
