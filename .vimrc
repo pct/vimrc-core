@@ -45,6 +45,7 @@ NeoBundle 'thinca/vim-quickrun'
 " Snippets
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'JazzCore/neocomplcache-ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 " File browsing
 NeoBundle 'scrooloose/nerdtree'
@@ -63,17 +64,6 @@ NeoBundle 'tpope/vim-repeat'
 
 " Status line
 NeoBundle 'bling/vim-airline'
-
-" Color themems
-NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle 'tomasr/molokai'
-" NeoBundle 'Lokaltog/vim-distinguished'
-" NeoBundle 'chriskempson/base16-vim'
-" NeoBundle 'tpope/vim-vividchalk'
-" NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
-" NeoBundle 'rainux/vim-desert-warm-256'
-NeoBundle 'nanotech/jellybeans.vim'
-" NeoBundle 'vim-scripts/wombat256.vim'
 
 
 filetype plugin indent on     " required!
@@ -296,3 +286,8 @@ let g:neocomplcache_enable_at_startup = 1
 
 " airline
 let g:airline_powerline_fonts = 1
+
+" Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
