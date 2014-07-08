@@ -292,3 +292,6 @@ let g:airline_powerline_fonts = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" go
+let g:go_disable_autoinstall = 1
