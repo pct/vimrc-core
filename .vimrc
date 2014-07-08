@@ -11,6 +11,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My NeoBundles here:
 "
+NeoBundle 'fatih/vim-go'
 
 " Editor Config
 NeoBundle 'editorconfig/editorconfig-vim'
