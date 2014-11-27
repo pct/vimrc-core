@@ -1,12 +1,18 @@
-"==================================
-filetype off                   " required!
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
 if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
+" Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My NeoBundles here:
@@ -36,7 +42,6 @@ NeoBundle 'mileszs/ack.vim'
 
 " Code completion
 NeoBundle 'ervandew/supertab'
-NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache.vim'
 
@@ -44,8 +49,6 @@ NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'thinca/vim-quickrun'
 
 " Snippets
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'JazzCore/neocomplcache-ultisnips'
 NeoBundle 'honza/vim-snippets'
 
 " File browsing
@@ -66,6 +69,7 @@ NeoBundle 'tpope/vim-repeat'
 " Status line
 NeoBundle 'bling/vim-airline'
 
+call neobundle#end()
 
 filetype plugin indent on     " required!
 

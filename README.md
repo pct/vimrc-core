@@ -1,8 +1,5 @@
 #vimrc-core
 
-###Requirement
-vim +python support
-
 ###One Step Install (Do you trust me?)
 command:
 
@@ -52,6 +49,3 @@ just in your vim env and use:
 
     	$ vim --version
 
-2. If you do not need "YouCompleteMe", just remove it, or:
-
-    	$ cd ~/.vim/bundle/YouCompleteMe; ./install.sh
