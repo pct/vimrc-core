@@ -7,89 +7,73 @@ if !1 | finish | endif
 
 if has('vim_starting')
   set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+"=== vim-plug begin
+call plug#begin('~/.vim/plugged')
 
-" My NeoBundles here:
-"
+" My Plugs here:
+
+Plug 'junegunn/vim-easy-align'
+
+" Group dependencies, vim-snippets depends on ultisnips
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Lang
-NeoBundle "elixir-lang/vim-elixir"
+Plug 'elixir-lang/vim-elixir'
 
 " Editor Config
-NeoBundle 'editorconfig/editorconfig-vim'
-
-" Rails
-NeoBundle 'tpope/vim-rails.git'
+Plug 'editorconfig/editorconfig-vim'
 
 " Misc
-NeoBundle 'vim-scripts/Align'
-NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'pekepeke/titanium-vim' 
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/matchit.zip'
+Plug 'mattn/emmet-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'pekepeke/titanium-vim' 
 
 " Fuzzy search
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/unite-help'
-NeoBundle 'Shougo/unite-session'
-NeoBundle 'thinca/vim-unite-history'
-NeoBundle 'mileszs/ack.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/unite-outline'
+Plug 'Shougo/unite-help'
+Plug 'Shougo/unite-session'
+Plug 'thinca/vim-unite-history'
+Plug 'mileszs/ack.vim'
 
 " Code completion
-NeoBundle 'ervandew/supertab'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/neocomplcache.vim'
+Plug 'ervandew/supertab'
+Plug 'Shougo/vimshell'
+Plug 'Shougo/neocomplcache.vim'
 
 " Shell
-NeoBundle 'thinca/vim-quickrun'
+Plug 'thinca/vim-quickrun'
 
 " Snippets
-NeoBundle 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " File browsing
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'Shougo/vimfiler'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Shougo/vimfiler'
 
 " Syntax (> 50 languages support)
-NeoBundle 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " Syntax checker
-NeoBundle 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " Text Objects
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " Status line
-NeoBundle 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
-call neobundle#end()
-
-filetype plugin indent on     " required!
-
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
-" Installation check.
-NeoBundleCheck
-
+call plug#end()
+"=== vim-plug end
 
 " ===============================================================
-
 
 " 設定 GUI 字型
 set guifont=Droid\ Sans\ Mono\ 12
@@ -281,17 +265,6 @@ endif
 let g:user_emmet_expandabbr_key = '<c-e>'
 let g:use_emmet_complete_tag = 1
 
-"NERDTree"
-autocmd vimenter * NERDTree
-autocmd vimenter * wincmd p " vim 開啟檔案時，focus 在檔案而非 NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeShowHidden=1
-let NERDTreeWinSize=26
-
-"NERDTreeTabs"
-let g:nerdtree_tabs_open_on_console_startup=1
-let g:nerdtree_tabs_focus_on_files=1
-
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 
@@ -302,6 +275,3 @@ let g:airline_powerline_fonts = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" go
-let g:go_disable_autoinstall = 1

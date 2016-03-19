@@ -8,4 +8,5 @@ cd vimrc-core; ./update.sh; cd -
 ln -s vimrc-core/.vimrc
 ln -s vimrc-core/.vim
 
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

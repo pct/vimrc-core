@@ -2,4 +2,4 @@
 *.swp
 .vim/undofiles
 .vim/.netrwhist
-.vim/bundle/*
+.vim/plugged
