@@ -27,6 +27,8 @@ The origin .vim and .vimrc will be renamed to .vim.yours and .vimrc.yours
       $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+      $ vim +PlugInstall +qall
+
 ###How to update
 
     $ cd vimrc-core
@@ -39,7 +41,7 @@ I've using Vim-Plug now.
 
 
 ### FAQ
-1. Check your vim environment has +python or not, just type:
+1. Check your vim environment has +python and +ruby or not, just type:
 
     	$ vim --version
 
