@@ -43,7 +43,6 @@ Plug 'mileszs/ack.vim'
 
 " Code completion
 Plug 'ervandew/supertab'
-Plug 'Shougo/vimshell'
 Plug 'Shougo/neocomplcache.vim'
 
 " Shell
@@ -51,11 +50,6 @@ Plug 'thinca/vim-quickrun'
 
 " Snippets
 Plug 'honza/vim-snippets'
-
-" File browsing
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Shougo/vimfiler'
 
 " Syntax (> 50 languages support)
 Plug 'sheerun/vim-polyglot'
@@ -79,7 +73,7 @@ call plug#end()
 set guifont=Droid\ Sans\ Mono\ 12
 
 " 使用面板
-colorscheme yzlin256
+colorscheme lanox
 
 " 256 色
 set t_Co=256
@@ -244,9 +238,9 @@ endif " has("autocmd")
 
 " vim 7.3 才啟用這些功能
 if version >= 703
-  set conceallevel=1
+  set conceallevel=2
   set concealcursor=nc
-  set colorcolumn=+1
+  set colorcolumn=85
   set cinoptions+=L0
   set undofile
   set undodir=~/.vim/undofiles
@@ -269,7 +263,8 @@ let g:use_emmet_complete_tag = 1
 let g:neocomplcache_enable_at_startup = 1
 
 " airline
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 
 " Snippets
 let g:UltiSnipsExpandTrigger="<tab>"
