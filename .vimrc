@@ -64,6 +64,9 @@ Plug 'tpope/vim-repeat'
 " Status line
 Plug 'bling/vim-airline'
 
+" React.js
+Plug 'mxw/vim-jsx'
+
 call plug#end()
 "=== vim-plug end
 
@@ -270,3 +273,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" React.js
+let g:jsx_ext_required = 0
+
