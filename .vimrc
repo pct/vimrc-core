@@ -67,6 +67,9 @@ Plug 'bling/vim-airline'
 " React.js
 Plug 'mxw/vim-jsx'
 
+" Git
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 "=== vim-plug end
 
