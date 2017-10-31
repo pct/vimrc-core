@@ -32,6 +32,11 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'pekepeke/titanium-vim' 
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-markdown'
+
 
 " Fuzzy search
 Plug 'Shougo/unite.vim'
