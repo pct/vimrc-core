@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ~
-git clone git://github.com/pct/vimrc-core.git
+git clone https://github.com/pct/vimrc-core
 mv .vimrc .vimrc.yours
 mv .vim .vim.yours
 ln -s vimrc-core/.vimrc
