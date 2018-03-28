@@ -1,4 +1,4 @@
-#vimrc-core
+#vimrc-core (use neovim)
 
 ###One Step Install (Do you trust me?)
 command:

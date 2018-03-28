@@ -14,11 +14,26 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " My Plugs here:
+Plug 'tomasr/molokai'
+
+Plug 'majutsushi/tagbar'
+
+Plug 'Shougo/denite.nvim'
 
 Plug 'junegunn/vim-easy-align'
 
+" Autocomplete
 " Group dependencies, vim-snippets depends on ultisnips
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Lang
 Plug 'elixir-lang/vim-elixir'
@@ -35,8 +50,10 @@ Plug 'pekepeke/titanium-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-markdown'
 
+" Markdown
+Plug 'godlygeek/tabular',{'for': ['markdown']}
+Plug 'plasticboy/vim-markdown',{'for': ['markdown']}
 
 " Fuzzy search
 Plug 'Shougo/unite.vim'
@@ -48,7 +65,6 @@ Plug 'mileszs/ack.vim'
 
 " Code completion
 Plug 'ervandew/supertab'
-Plug 'Shougo/neocomplcache.vim'
 
 " Shell
 Plug 'thinca/vim-quickrun'
@@ -84,7 +100,7 @@ call plug#end()
 set guifont=Droid\ Sans\ Mono\ 12
 
 " 使用面板
-colorscheme lanox
+colorscheme molokai
 
 " 256 色
 set t_Co=256
@@ -100,7 +116,6 @@ set nocompatible
 
 " Set mouse
 set mouse=a
-set ttymouse=xterm
 
 " 打開語法效果
 syntax on
@@ -265,17 +280,26 @@ endif
 " Plugin Settings
 "=================
 
+" color molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 "Emmet settings"
 let g:user_emmet_expandabbr_key = '<c-e>'
 let g:use_emmet_complete_tag = 1
 
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-
 " airline
 let g:airline#extensions#tabline#enabled = 1
 
+" tagbar
+let g:tagbar_show_linenumbers = 1
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -285,3 +309,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " React.js
 let g:jsx_ext_required = 0
 
+" nvim
+if !has('nvim')
+  set ttymouse=xterm2
+endif
+
+if exists(':tnoremap')
+  tnoremap <Esc> <C-\><C-n>
+endif
+
+if exists(':tnoremap')
+  tnoremap <Esc> <C-\><C-n>
+endif
