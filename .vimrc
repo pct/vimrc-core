@@ -16,8 +16,6 @@ call plug#begin('~/.vim/plugged')
 " My Plugs here:
 Plug 'tomasr/molokai'
 
-Plug 'majutsushi/tagbar'
-
 Plug 'Shougo/denite.nvim'
 
 Plug 'junegunn/vim-easy-align'
@@ -50,10 +48,6 @@ Plug 'pekepeke/titanium-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
-
-" Markdown
-Plug 'godlygeek/tabular',{'for': ['markdown']}
-Plug 'plasticboy/vim-markdown',{'for': ['markdown']}
 
 " Fuzzy search
 Plug 'Shougo/unite.vim'
@@ -290,9 +284,6 @@ let g:use_emmet_complete_tag = 1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
-
-" tagbar
-let g:tagbar_show_linenumbers = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
