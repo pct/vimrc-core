@@ -16,8 +16,6 @@ call plug#begin('~/.vim/plugged')
 " My Plugs here:
 Plug 'tomasr/molokai'
 
-Plug 'Shougo/denite.nvim'
-
 Plug 'junegunn/vim-easy-align'
 
 " Autocomplete
@@ -39,12 +37,13 @@ Plug 'elixir-lang/vim-elixir'
 " Editor Config
 Plug 'editorconfig/editorconfig-vim'
 
+" Fuzzy Finder
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
 " Misc
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/emmet-vim'
-Plug 'kien/ctrlp.vim'
-Plug 'pekepeke/titanium-vim' 
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
@@ -288,10 +287,6 @@ let g:airline#extensions#tabline#enabled = 1
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
-" ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
 " Snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -299,6 +294,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " React.js
 let g:jsx_ext_required = 0
+
+" LeaderF
+let g:Lf_ShortcutF = '<c-p>'
 
 " nvim
 if !has('nvim')
