@@ -78,9 +78,6 @@ Plug 'tpope/vim-repeat'
 " Status line
 Plug 'bling/vim-airline'
 
-" React.js
-Plug 'mxw/vim-jsx'
-
 " Git
 Plug 'airblade/vim-gitgutter'
 
@@ -291,9 +288,6 @@ let g:deoplete#enable_at_startup = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" React.js
-let g:jsx_ext_required = 0
 
 " LeaderF
 let g:Lf_ShortcutF = '<c-p>'
