@@ -84,6 +84,9 @@ Plug 'airblade/vim-gitgutter'
 " NerdTree
 Plug 'preservim/nerdtree'
 
+" Finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
 "=== vim-plug end
 

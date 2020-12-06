@@ -45,3 +45,7 @@ I've using Vim-Plug now.
 
     	$ vim --version
 
+
+### Tips
+1. :NERDTree
+2. :FZF (for finding files)
