@@ -81,6 +81,9 @@ Plug 'bling/vim-airline'
 " Git
 Plug 'airblade/vim-gitgutter'
 
+" NerdTree
+Plug 'preservim/nerdtree'
+
 call plug#end()
 "=== vim-plug end
 
